@@ -15,12 +15,13 @@
 		8DD5C8D625DCC9FC0063D083 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DD5C8D425DCC9FC0063D083 /* LaunchScreen.storyboard */; };
 		8DD5C8E125DCC9FC0063D083 /* PolylinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5C8E025DCC9FC0063D083 /* PolylinkTests.swift */; };
 		8DD5C8EC25DCC9FC0063D083 /* PolylinkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5C8EB25DCC9FC0063D083 /* PolylinkUITests.swift */; };
-		8DD5C90625DCCB310063D083 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5C90525DCCB310063D083 /* LoginViewController.swift */; };
-		8DD5C90B25DCCB3F0063D083 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5C90A25DCCB3F0063D083 /* RegisterViewController.swift */; };
 		8DD5C91025DCCB510063D083 /* PhotoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5C90F25DCCB510063D083 /* PhotoViewerViewController.swift */; };
 		8DD5C91525DCCB630063D083 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5C91425DCCB630063D083 /* VideoPlayerViewController.swift */; };
 		8DD5C91A25DCCB730063D083 /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5C91925DCCB730063D083 /* NewConversationViewController.swift */; };
 		8DD5C91F25DCCB7D0063D083 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5C91E25DCCB7D0063D083 /* ProfileViewController.swift */; };
+		8DD5C92E25DE4EED0063D083 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5C92D25DE4EED0063D083 /* LoginViewController.swift */; };
+		8DD5C93625DE4FE40063D083 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5C93525DE4FE40063D083 /* RegisterViewController.swift */; };
+		8DD5C93B25DE55260063D083 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5C93A25DE55260063D083 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,12 +56,13 @@
 		8DD5C8E725DCC9FC0063D083 /* PolylinkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolylinkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD5C8EB25DCC9FC0063D083 /* PolylinkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolylinkUITests.swift; sourceTree = "<group>"; };
 		8DD5C8ED25DCC9FC0063D083 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8DD5C90525DCCB310063D083 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		8DD5C90A25DCCB3F0063D083 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8DD5C90F25DCCB510063D083 /* PhotoViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerViewController.swift; sourceTree = "<group>"; };
 		8DD5C91425DCCB630063D083 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		8DD5C91925DCCB730063D083 /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
 		8DD5C91E25DCCB7D0063D083 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8DD5C92D25DE4EED0063D083 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8DD5C93525DE4FE40063D083 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		8DD5C93A25DE55260063D083 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,8 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				8DD5C8CD25DCC9FB0063D083 /* ConversationsViewController.swift */,
-				8DD5C90525DCCB310063D083 /* LoginViewController.swift */,
-				8DD5C90A25DCCB3F0063D083 /* RegisterViewController.swift */,
+				8DD5C92325DCCDDA0063D083 /* Login */,
 				8DD5C90F25DCCB510063D083 /* PhotoViewerViewController.swift */,
 				8DD5C91425DCCB630063D083 /* VideoPlayerViewController.swift */,
 				8DD5C91925DCCB730063D083 /* NewConversationViewController.swift */,
@@ -181,6 +182,7 @@
 			children = (
 				8DD5C8CB25DCC9FB0063D083 /* SceneDelegate.swift */,
 				8DD5C8C925DCC9FB0063D083 /* AppDelegate.swift */,
+				8DD5C93A25DE55260063D083 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -192,6 +194,15 @@
 				8DD5C8D425DCC9FC0063D083 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		8DD5C92325DCCDDA0063D083 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8DD5C92D25DE4EED0063D083 /* LoginViewController.swift */,
+				8DD5C93525DE4FE40063D083 /* RegisterViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,11 +335,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DD5C90625DCCB310063D083 /* LoginViewController.swift in Sources */,
-				8DD5C90B25DCCB3F0063D083 /* RegisterViewController.swift in Sources */,
+				8DD5C93625DE4FE40063D083 /* RegisterViewController.swift in Sources */,
+				8DD5C92E25DE4EED0063D083 /* LoginViewController.swift in Sources */,
 				8DD5C91A25DCCB730063D083 /* NewConversationViewController.swift in Sources */,
 				8DD5C8CE25DCC9FB0063D083 /* ConversationsViewController.swift in Sources */,
 				8DD5C91525DCCB630063D083 /* VideoPlayerViewController.swift in Sources */,
+				8DD5C93B25DE55260063D083 /* Extensions.swift in Sources */,
 				8DD5C8CA25DCC9FB0063D083 /* AppDelegate.swift in Sources */,
 				8DD5C91F25DCCB7D0063D083 /* ProfileViewController.swift in Sources */,
 				8DD5C8CC25DCC9FB0063D083 /* SceneDelegate.swift in Sources */,
