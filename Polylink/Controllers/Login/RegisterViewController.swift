@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RegisterViewController: UIViewController {
     
@@ -19,7 +20,7 @@ class RegisterViewController: UIViewController {
     //initializing image
     private let imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "person")
+        imageView.image = UIImage(systemName: "person.circle.fill")
         imageView.tintColor = .gray
         imageView.contentMode = .scaleAspectFit
         imageView.layer.masksToBounds = true
@@ -141,7 +142,7 @@ class RegisterViewController: UIViewController {
     }
     
     @objc private func didTapChangeProfilePic() {
-        print("change pic")
+        presentPhotoActionSheet()
     }
     
     //adding to the screen: the layouts of the initalized imageview and textfield
@@ -155,22 +156,29 @@ class RegisterViewController: UIViewController {
                                  y: 20,
                                  width: size,
                                  height: size)
+        
+        imageView.layer.cornerRadius = imageView.width/2.0 //Round the edits of the image for profile
+        
         firstNameField.frame = CGRect(x: 30,
                                   y: imageView.bottom+10,
                                   width: scrollView.width-60,
                                   height: 52)
+        
         lastNameField.frame = CGRect(x: 30,
                                   y: firstNameField.bottom+10,
                                   width: scrollView.width-60,
                                   height: 52)
+        
         emailField.frame = CGRect(x: 30,
                                   y: lastNameField.bottom+10,
                                   width: scrollView.width-60,
                                   height: 52)
+        
         passwordField.frame = CGRect(x: 30,
                                      y: emailField.bottom+10,
                                      width: scrollView.width-60,
                                      height: 52)
+        
         registerButton.frame = CGRect(x: 30,
                                    y: passwordField.bottom+10,
                                    width: scrollView.width-60,
@@ -202,6 +210,32 @@ class RegisterViewController: UIViewController {
         }
         
         // Firebase Log In
+        DatabaseManager.shared.userExists(with: email, completion: { [weak self] exists in
+            guard let strongSelf = self else {
+                return
+            }
+
+            guard !exists else {
+                // user already exists => throw error
+                strongSelf.alertUserLoginError()
+                return
+            }
+            
+            
+            FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: { authResult, error in
+                guard authResult != nil, error == nil else {
+                    print("Error creating user")
+                    return
+                }
+                
+                //Insert new user into database
+                DatabaseManager.shared.insertUser(with: ChatAppUser(firstName: firstName,
+                                                                    lastName: lastName,
+                                                                    emailAddress: email))
+
+                strongSelf.navigationController?.dismiss(animated: true, completion: nil)
+            })
+        })
     }
     
     //alert on screen
@@ -238,4 +272,65 @@ extension RegisterViewController: UITextFieldDelegate {
         return true
     }
     
+}
+
+//ask use to get photo for profile which would be a sheet that has 2 options to take photo or choose photo
+extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func presentPhotoActionSheet() {
+        let actionSheet = UIAlertController(title: "Profile Picture",
+                                            message: "How would you like to select a picture?",
+                                            preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "Cancel",
+                                            style: .cancel,
+                                            handler: nil))
+        actionSheet.addAction(UIAlertAction(title: "Take Photo",
+                                            style: .default,
+                                            handler: { [weak self] _ in
+                                                
+                                                self?.presentCamera()
+                                                
+                                            }))
+        actionSheet.addAction(UIAlertAction(title: "Chose Photo",
+                                            style: .default,
+                                            handler: { [weak self] _ in
+                                                
+                                                self?.presentPhotoPicker()
+                                                
+                                            }))
+        
+        present(actionSheet, animated: true)
+    }
+
+    func presentCamera() {
+        let vc = UIImagePickerController()
+        vc.sourceType = .camera
+        vc.delegate = self
+        vc.allowsEditing = true
+        present(vc, animated: true)
+    }
+
+    func presentPhotoPicker() {
+        let vc = UIImagePickerController()
+        vc.sourceType = .photoLibrary
+        vc.delegate = self
+        vc.allowsEditing = true
+        present(vc, animated: true)
+    }
+
+    //TODO: Implement face checker to make sure that photo detects face
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        //image picked goes into imageView
+        guard let selectedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
+            return
+        }
+
+        self.imageView.image = selectedImage
+    }
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+
 }

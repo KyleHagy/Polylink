@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8DA4980C25E384D5009CCB1C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DA4980B25E384D5009CCB1C /* GoogleService-Info.plist */; };
+		8DA4981425E38D7F009CCB1C /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4981325E38D7F009CCB1C /* DatabaseManager.swift */; };
 		8DD5C8CA25DCC9FB0063D083 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5C8C925DCC9FB0063D083 /* AppDelegate.swift */; };
 		8DD5C8CC25DCC9FB0063D083 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5C8CB25DCC9FB0063D083 /* SceneDelegate.swift */; };
 		8DD5C8CE25DCC9FB0063D083 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5C8CD25DCC9FB0063D083 /* ConversationsViewController.swift */; };
@@ -22,6 +24,7 @@
 		8DD5C92E25DE4EED0063D083 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5C92D25DE4EED0063D083 /* LoginViewController.swift */; };
 		8DD5C93625DE4FE40063D083 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5C93525DE4FE40063D083 /* RegisterViewController.swift */; };
 		8DD5C93B25DE55260063D083 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5C93A25DE55260063D083 /* Extensions.swift */; };
+		D7200FCA2752632D4D014880 /* Pods_Polylink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D240189B55E7672A7B6F2C3A /* Pods_Polylink.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		745FBE22F9ADC5167725007C /* Pods-Polylink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Polylink.release.xcconfig"; path = "Target Support Files/Pods-Polylink/Pods-Polylink.release.xcconfig"; sourceTree = "<group>"; };
+		8DA4980B25E384D5009CCB1C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8DA4981325E38D7F009CCB1C /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		8DD5C8C625DCC9FB0063D083 /* Polylink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Polylink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD5C8C925DCC9FB0063D083 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DD5C8CB25DCC9FB0063D083 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +69,8 @@
 		8DD5C92D25DE4EED0063D083 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8DD5C93525DE4FE40063D083 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8DD5C93A25DE55260063D083 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D240189B55E7672A7B6F2C3A /* Pods_Polylink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Polylink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E540D59C312DD368D08AC20A /* Pods-Polylink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Polylink.debug.xcconfig"; path = "Target Support Files/Pods-Polylink/Pods-Polylink.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7200FCA2752632D4D014880 /* Pods_Polylink.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +99,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		311B4B7F27F334DF9618C38D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D240189B55E7672A7B6F2C3A /* Pods_Polylink.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8DD5C8BD25DCC9FB0063D083 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +114,8 @@
 				8DD5C8DF25DCC9FC0063D083 /* PolylinkTests */,
 				8DD5C8EA25DCC9FC0063D083 /* PolylinkUITests */,
 				8DD5C8C725DCC9FB0063D083 /* Products */,
+				9DDD1ABCD3A6849F78B93857 /* Pods */,
+				311B4B7F27F334DF9618C38D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +132,7 @@
 		8DD5C8C825DCC9FB0063D083 /* Polylink */ = {
 			isa = PBXGroup;
 			children = (
+				8DA4980B25E384D5009CCB1C /* GoogleService-Info.plist */,
 				8DD5C90025DCCA3B0063D083 /* Resources */,
 				8DD5C8FF25DCCA330063D083 /* ViewModels */,
 				8DD5C8FE25DCCA290063D083 /* Models */,
@@ -145,11 +165,11 @@
 			isa = PBXGroup;
 			children = (
 				8DD5C8CD25DCC9FB0063D083 /* ConversationsViewController.swift */,
-				8DD5C92325DCCDDA0063D083 /* Login */,
 				8DD5C90F25DCCB510063D083 /* PhotoViewerViewController.swift */,
 				8DD5C91425DCCB630063D083 /* VideoPlayerViewController.swift */,
 				8DD5C91925DCCB730063D083 /* NewConversationViewController.swift */,
 				8DD5C91E25DCCB7D0063D083 /* ProfileViewController.swift */,
+				8DD5C92325DCCDDA0063D083 /* Login */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -183,6 +203,7 @@
 				8DD5C8CB25DCC9FB0063D083 /* SceneDelegate.swift */,
 				8DD5C8C925DCC9FB0063D083 /* AppDelegate.swift */,
 				8DD5C93A25DE55260063D083 /* Extensions.swift */,
+				8DA4981325E38D7F009CCB1C /* DatabaseManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -205,6 +226,15 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		9DDD1ABCD3A6849F78B93857 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E540D59C312DD368D08AC20A /* Pods-Polylink.debug.xcconfig */,
+				745FBE22F9ADC5167725007C /* Pods-Polylink.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -212,9 +242,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8DD5C8F025DCC9FC0063D083 /* Build configuration list for PBXNativeTarget "Polylink" */;
 			buildPhases = (
+				23BD06CBEA921603A3C431BE /* [CP] Check Pods Manifest.lock */,
 				8DD5C8C225DCC9FB0063D083 /* Sources */,
 				8DD5C8C325DCC9FB0063D083 /* Frameworks */,
 				8DD5C8C425DCC9FB0063D083 /* Resources */,
+				C450155542FC66F24AAFA167 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -309,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DD5C8D625DCC9FC0063D083 /* LaunchScreen.storyboard in Resources */,
+				8DA4980C25E384D5009CCB1C /* GoogleService-Info.plist in Resources */,
 				8DD5C8D325DCC9FC0063D083 /* Assets.xcassets in Resources */,
 				8DD5C8D125DCC9FB0063D083 /* Main.storyboard in Resources */,
 			);
@@ -330,12 +363,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		23BD06CBEA921603A3C431BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Polylink-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C450155542FC66F24AAFA167 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Polylink/Pods-Polylink-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Polylink/Pods-Polylink-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Polylink/Pods-Polylink-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8DD5C8C225DCC9FB0063D083 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8DD5C93625DE4FE40063D083 /* RegisterViewController.swift in Sources */,
+				8DA4981425E38D7F009CCB1C /* DatabaseManager.swift in Sources */,
 				8DD5C92E25DE4EED0063D083 /* LoginViewController.swift in Sources */,
 				8DD5C91A25DCCB730063D083 /* NewConversationViewController.swift in Sources */,
 				8DD5C8CE25DCC9FB0063D083 /* ConversationsViewController.swift in Sources */,
@@ -517,6 +593,7 @@
 		};
 		8DD5C8F125DCC9FC0063D083 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E540D59C312DD368D08AC20A /* Pods-Polylink.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -535,6 +612,7 @@
 		};
 		8DD5C8F225DCC9FC0063D083 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 745FBE22F9ADC5167725007C /* Pods-Polylink.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
